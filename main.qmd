@@ -1,0 +1,17 @@
+---
+title: "MI401"
+author: "Rafael Santos"
+lang: pt-BR
+format:
+  pdf:
+    toc: true
+    number-sections: true
+    documentclass: article
+    geometry:
+      - margin=1in
+    fontsize: 11pt
+    colorlinks: true
+---
+
+{{< include 1_fundamentos_probabilidade.qmd >}}
+{{< include 2_variaveis_aleatorias.qmd >}}

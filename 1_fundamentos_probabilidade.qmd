@@ -1,0 +1,121 @@
+
+# Fundamentos de Probabilidade
+## Notação de Conjuntos
+ * $A\subseteq B$: A está contido em B e A é menor que B;
+
+## Domínio, Contradomínio, Imagem e Pré-imagem
+O domínio $\mathcal{D}(g)$ de uma função $g$ é o conjunto formado por todos os valores de entrada possíveis para $g$.
+$$
+\mathcal{D}(g) = \{x\;|\;\exists g(x)\}
+$$
+
+O contradomínio $\mathcal{CD}(g)$ de uma função $g$ é o conjunto em que moram todos os valores possíveis de $g$.
+$$
+g:\mathcal{D}(g)\rightarrow\mathcal{CD}(g)
+$$
+
+Lê-se g é uma aplicação de $\mathcal{D}(g)$ em $\mathcal{CD}(g)$. A imagem de uma função $\mathcal{Im}(g)$, são todos os valores que $g$ alcança em $\mathcal{CD}(g)$.
+$$
+\mathcal{Im}(g) = \{g(x)\;|\;x\in\mathcal{D}(g)\}
+$$
+
+O conjunto de todos os elementos em $\mathcal{D}(g)$ que mapeiam um subconjunto de $\mathcal{Im}(g)$ é chamado de pré-imagem ou imagem inversa.
+$$
+g^{-1}(x)=\{x\in\mathcal{D}(g)\;|\;g(x)\in A,\;A\subseteq\mathcal{Im}(g)\}
+$$
+
+## Espaço de Probabilidade
+Um espaço de probabilidade é um triplo $(\Omega, \mathcal{A}, \mathbb{P})$ onde:
+
+ * $\Omega$ é o espaço amostral
+ * $\mathcal{A}$ é a $\sigma$-álgebra de eventos
+ * $\mathbb{P}$ é a função de probabilidade
+
+### Espaço Amostral
+É o conjunto em que moram todos resultados possíveis de um experimento determinado, denotado por $\Omega$. O espaço amostral, não é o conjunto das unidades amostrais, mas todas as combinações possíveis das unidades amostrais, dado o experimento.
+
+### Álgebra e $\sigma$-Álgebra de Eventos
+Uma álgebra de eventos $\mathcal{F}$ é uma coleção de subconjuntos de $\Omega$, que obedece as seguintes propriedades:
+
+ * $\Omega\in\mathcal{F}$
+ * Se $A\in\mathcal{F}$, então $A^{c}\in\mathcal{F}$
+ * Se $A_1,A_2,\dots\in\mathcal{F}$, então $\bigcup^{n}_{i=1}A_i\in\mathcal{F}$
+
+Ou seja, é um conjunto fechado sobre complementar e sobre uniões finitas. E, indo além seja $\mathcal{A}$ uma $\sigma$-álgebra de eventos, então $\mathcal{A}$ obedece as segintes propriedades:
+
+ * $\Omega\in\mathcal{F}$
+ * Se $A\in\mathcal{F}$, então $A^{c}\in\mathcal{F}$
+ * Se $A_1,A_2,\dots\in\mathcal{F}$, então $\bigcup^{\infty}_{i=1}A_i\in\mathcal{F}$
+
+Ou seja, é um conjunto fechado sobre complementar e sobre uniões infinitas. Definir a $\sigma$-álgebra de eventos é necessário para fazer operações com os eventos possíveis, e operações com as probabilidades dos eventos de interesse.
+
+#### Partição de um Espaço Amostral
+Seja $\Omega$ um espaço amostral, uma partição de $\Omega$ é uma coleção de subconjuntos $A_1, A_2, \dots,A_n$ de $\Omega$ tal que:
+
+ * $A_i\cap A_j = \emptyset\;\forall\;i,j\;|\;j\neq j$
+ * $\bigcup^{n}_{i=1}A_i = \Omega$
+
+### Função de Probabilidade
+A função de probabilidade (ou medida de probabilidade) $\mathbb{P}$ atribui probabilidades aos eventos presentes em $\mathcal{A}$. $\mathbb{P}$ é uma função $\mathbb{P}:\mathcal{A}\rightarrow[0,1]$ que deve satisfazer as sueguintes probabilidades:
+
+ * $\mathbb{P}(\emptyset)=0$, $\mathbb{P}(\Omega)=1$
+ * Sejam $A_1, A_2, \dots$ uma coleção de elemntos disjuntos de $\mathcal{A}$ tal que $A_i\cap A_j = \emptyset\;\forall\;i,j\;|\;j\neq j$ então
+
+$$
+\mathbb{P}\left( \bigcup^{\infty}_{i=1}A_i \right) =
+\sum^{\infty}_{i=1}\mathbb{P}(A_i)
+$$
+
+## Probabilidade Condicional
+Uma probabilidade condicional $\mathbb{P}(A|B)$ é a probabilidade de um evento $A$ ocorrer, dado que outro evento $B$ já ocorreu. Ela é definida como:
+$$
+\mathbb{P}(A|B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)}, \quad \text{se } \mathbb{P}(B) > 0
+$$
+
+## Fórmula da Probabilidade Total
+Sejam $A$ e $B$ dois eventos tal que $\mathbb{P}(B) \neq 0$, então:
+$$
+A= (A \cap B) \cup (A \cap B^c)
+$$
+
+Portanto,
+$$
+\mathbb{P}(A) = \mathbb{P}(A|B)\mathbb{P}(B) + \mathbb{P}(A|B^c)\mathbb{P}(B^c)
+$$
+
+Seja $B_1, B_2, \dots, B_n$ uma partição de $\Omega$, então:
+$$
+\mathbb{P}(A) = \sum^{n}_{i=1}\mathbb{P}(A|B_i)\mathbb{P}(B_i)
+$$
+
+## Teorema de Bayes
+Sejam $A$ e $B$ dois eventos tal que $\mathbb{P}(B) \neq 0$. Considerando que
+$$
+\mathbb{P}(A \cap B) = \mathbb{P}(B \cap A)
+$$
+
+Pode-se relacionar $\mathbb{P}(B|A)$ e $\mathbb{P}(A|B)$ tal que:
+$$
+\mathbb{P}(A|B) = \frac{\mathbb{P}(B|A) \mathbb{P}(A)}{\mathbb{P}(B)}, \quad \text{se } \mathbb{P}(B) > 0
+$$
+
+Esta é a fórmula do Teorema de Bayes. Seja $B_1, B_2, \dots, B_n$ uma partição de $\Omega$, ainda pode-se a relacionar com a fórmula da probabilidade total, tal que:
+$$
+\mathbb{P}(B_i|A) = \frac{\mathbb{P}(A|B_i) \mathbb{P}(B_i)}{\sum^{n}_{j=1}\mathbb{P}(A|B_j)\mathbb{P}(B_j)}, \quad \text{se } \mathbb{P}(A) > 0
+$$
+
+## Independência de Eventos
+Dois eventos $A$ e $B$ são independentes se a ocorrência de um não afeta a probabilidade de ocorrência do outro. Formalmente, $A$ e $B$ são independentes se:
+$$
+\mathbb{P}(A \cap B) = \mathbb{P}(A) \mathbb{P}(B)
+$$
+
+de forma mais geral, uma família de eventos é chamada independente se para cada subconjunto finito $I \subseteq \{1, 2, \dots, n\}$, temos:
+$$
+\mathbb{P}\left( \bigcap_{i \in I} A_i \right) = \prod_{i \in I} \mathbb{P}(A_i)
+$$
+
+Uma coleção de eventos $\{A_i: i \in I\}$, $I =\{1, 2, \dots, n\}$ é mutuamente independente se 
+$$
+\mathbb{P}(A_i \cap A_j) = \mathbb{P}(A_i)\mathbb{P}(A_j), \quad \text{para } i \neq j
+$$
