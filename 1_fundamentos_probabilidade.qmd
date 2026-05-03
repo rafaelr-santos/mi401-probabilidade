@@ -3,6 +3,13 @@
 ## Notação de Conjuntos
  * $A\subseteq B$: A está contido em B e A é menor que B;
 
+## Operação de Conjuntos
+ * $A\cup B$: União de A e B, ou seja, o conjunto formado por todos os elementos que pertencem a A ou a B ou a ambos
+ * $A\cap B$: Interseção de A e B, ou seja, o conjunto formado por todos os elementos que pertencem a A e a B;
+ * $A^c$: Complemento de A, ou seja, o conjunto formado por todos os elementos que não pertencem a A;
+ * $A\setminus B$: Diferença entre A e B, ou seja, o conjunto formado por todos os elementos que pertencem a A mas não pertencem a B;
+
+
 ## Domínio, Contradomínio, Imagem e Pré-imagem
 O domínio $\mathcal{D}(g)$ de uma função $g$ é o conjunto formado por todos os valores de entrada possíveis para $g$.
 $$
@@ -25,7 +32,7 @@ g^{-1}(x)=\{x\in\mathcal{D}(g)\;|\;g(x)\in A,\;A\subseteq\mathcal{Im}(g)\}
 $$
 
 ## Espaço de Probabilidade
-Um espaço de probabilidade é um triplo $(\Omega, \mathcal{A}, \mathbb{P})$ onde:
+Um espaço de probabilidade é uma tripla $(\Omega, \mathcal{A}, \mathbb{P})$ onde:
 
  * $\Omega$ é o espaço amostral
  * $\mathcal{A}$ é a $\sigma$-álgebra de eventos

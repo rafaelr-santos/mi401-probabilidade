@@ -11,7 +11,14 @@ format:
       - margin=1in
     fontsize: 11pt
     colorlinks: true
+    include-in-header:
+      text: |
+        \usepackage{amsthm}
+        \theoremstyle{definition}
+        \newtheorem{ex}{Exemplo}[section]
 ---
+
 
 {{< include 1_fundamentos_probabilidade.qmd >}}
 {{< include 2_variaveis_aleatorias.qmd >}}
+{{< include exemplos.qmd >}}

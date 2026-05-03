@@ -1,14 +1,31 @@
-# Variável Aleatórias
+# Variável Aleatória
 Seja $(\Omega, \mathcal{A}, \mathbb{P})$ um espaço de probabilidade. Uma variável aleatória $X$ é uma aplicação de $\Omega$ em $\mathbb{R}$.
 $$
 X: \Omega \rightarrow \mathbb{R}
 $$
 
-Tal que 
+Com esta aplicação, um novo espaço de probabilidade é criado em $\mathbb{R}$. A $\sigma$-álgebra gerada pelo conjunto $\mathbb{R}$ é a $\mathcal{B}(\mathbb{R})$ E uma variável $X$ deve existir uma correspondência de todo evento/conjunto $B\in\mathcal{B}(\mathbb{R})$ no espaço de probabilidade de "domínio" da $X$, tal que $X^{-1}(B)\in\mathcal{A}$
 $$
-\forall A \in \mathcal{B}(\mathbb{R}), X^{-1}(A)\in\mathcal{A}
+\forall B \in \mathcal{B}(\mathbb{R}),\;X^{-1}(B)=\{w\in\Omega\;|\;X(w)\in B\}\in\mathcal{A}
 $$
 
+Isto é, a princício isso teria de ser avaliado para todos os conjuntos $B$ possíveis para garantir que $X$ é uma variável aleatória. Mas basta avaliar 
+$$
+\{w\in \Omega\;|\;X(w)\leq x\}\in \mathcal{A}\;\forall\;x\in\mathbb{R}
+$$
+
+$$
+(\Omega, \mathcal{A}, \mathbb{P})\stackrel{X}{\longrightarrow}(\mathbb{R}, \mathcal{B}(\mathbb{R}), \mathbb{P}_{X})
+$$
+
+
+
+
+
+
+
+As relações entre as variáveis aleatórias são:
+    *
 
 ## Variáveis Aleatórias Discretas
 ## Variáveis Aleatórias Contínuas

@@ -1,0 +1,39 @@
+# Exemplos
+## Trilha da Probabilidade de uma Moeda Honesta
+### Definição do Espaço de Probabilidade
+Considere um experimento que seja o lançamento de uma moeda honesta. Seja $(\Omega, \mathcal{A}, \mathbb{P})$ um espaço de probabilidade.
+
+- $\Omega = \{\text{cara}, \text{coroa}\}$
+- $\mathcal{A}=\mathcal{P}(\Omega)=\{\emptyset,\Omega,{\text{cara}, \text{coroa}, \{\text{cara, coroa}}\}\}$
+- $\mathbb{P}(\emptyset) = 0$
+- $\mathbb{P}(\Omega) = 1$
+- $\mathbb{P}(\{\text{cara}\}) = 0.5$
+- $\mathbb{P}(\{\text{coroa}\}) = 0.5$
+- $\mathbb{P}(\{\text{cara, coroa}\}) = \mathbb{P}(\{\text{cara}\}\cup \{\text{coroa}\}) = 0.5+0.5 = 1$
+
+### Independência
+Sejam os eventos $H=\{\text{cara}\}$ e $T=\{\text{coroa}\}$. Segue que
+$$
+\mathbb{P}(A\cap B)=\mathbb{P}(A\cap A^{c})=\mathbb{P}(\emptyset)=0
+$$
+$$
+\mathbb{P}(A)\mathbb{P}(B) = (0.5)(0.5) = (0.5)^{2}
+$$
+
+Portanto
+$$
+\mathbb{P}(A\cap B) \neq \mathbb{P}(A)\mathbb{P}(B)
+$$
+
+Assim, $A$ e $B$ não são eventos independentes.
+
+### Definição de uma Variável Aleatória
+Seja uma váriável aleatória $X$, ou seja, $(\Omega, \mathcal{A}, \mathbb{P})\stackrel{X}{\longrightarrow}(\mathbb{R}, \mathcal{B}(\mathbb{R}), \mathbb{P}_{X})$. No caso, considere o a seguinte aplicação $X:\Omega\rightarrow\mathbb{R}$
+
+- $X(\text{cara}) = 1$
+- $X(\text{coroa}) = 0$
+
+Ou seja, cara representa um sucesso, e coroa representa um fracasso. Conferindo a mensurabilidade da variável aleatória pela definição.
+
+- $1\in\mathcal{B}(\mathbb{R}),\;X^{-1}(1) = \{\text{cara} \in \Omega\}\in \mathcal{A}$
+- $0\in\mathcal{B}(\mathbb{R}),\;X^{-1}(0) = \{\text{coroa} \in \Omega\}\in \mathcal{A}$
