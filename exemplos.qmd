@@ -1,15 +1,15 @@
 # Exemplos
-## Trilha da Probabilidade de uma Moeda Honesta
+## Trilha da Probabilidade de uma Moeda
 ### Definição do Espaço de Probabilidade
-Considere um experimento que seja o lançamento de uma moeda honesta. Seja $(\Omega, \mathcal{A}, \mathbb{P})$ um espaço de probabilidade.
+Considere um experimento que seja o lançamento de uma moeda. Seja $(\Omega, \mathcal{A}, \mathbb{P})$ um espaço de probabilidade.
 
 - $\Omega = \{\text{cara}, \text{coroa}\}$
 - $\mathcal{A}=\mathcal{P}(\Omega)=\{\emptyset,\Omega,{\text{cara}, \text{coroa}, \{\text{cara, coroa}}\}\}$
 - $\mathbb{P}(\emptyset) = 0$
 - $\mathbb{P}(\Omega) = 1$
-- $\mathbb{P}(\{\text{cara}\}) = 0.5$
-- $\mathbb{P}(\{\text{coroa}\}) = 0.5$
-- $\mathbb{P}(\{\text{cara, coroa}\}) = \mathbb{P}(\{\text{cara}\}\cup \{\text{coroa}\}) = 0.5+0.5 = 1$
+- $\mathbb{P}(\{\text{cara}\}) = p$
+- $\mathbb{P}(\{\text{coroa}\}) = q$
+- $\mathbb{P}(\{\text{cara, coroa}\}) = \mathbb{P}(\{\text{cara}\}\cup \{\text{coroa}\}) = p+q = 1$
 
 ### Independência
 Sejam os eventos $H=\{\text{cara}\}$ e $T=\{\text{coroa}\}$. Segue que
@@ -17,15 +17,15 @@ $$
 \mathbb{P}(A\cap B)=\mathbb{P}(A\cap A^{c})=\mathbb{P}(\emptyset)=0
 $$
 $$
-\mathbb{P}(A)\mathbb{P}(B) = (0.5)(0.5) = (0.5)^{2}
+\mathbb{P}(A)\mathbb{P}(B) = pq
 $$
 
 Portanto
 $$
-\mathbb{P}(A\cap B) \neq \mathbb{P}(A)\mathbb{P}(B)
+\mathbb{P}(A\cap B) \neq \mathbb{P}(A)\mathbb{P}(B)\;\forall\;p\text{ ou }q\neq0
 $$
 
-Assim, $A$ e $B$ não são eventos independentes.
+Assim, $A$ e $B$ não são eventos independentes quando $p\text{ ou }q\neq0$.
 
 ### Definição de uma Variável Aleatória
 Seja uma váriável aleatória $X$, ou seja, $(\Omega, \mathcal{A}, \mathbb{P})\stackrel{X}{\longrightarrow}(\mathbb{R}, \mathcal{B}(\mathbb{R}), \mathbb{P}_{X})$. No caso, considere o a seguinte aplicação $X:\Omega\rightarrow\mathbb{R}$
@@ -33,7 +33,32 @@ Seja uma váriável aleatória $X$, ou seja, $(\Omega, \mathcal{A}, \mathbb{P})\
 - $X(\text{cara}) = 1$
 - $X(\text{coroa}) = 0$
 
-Ou seja, cara representa um sucesso, e coroa representa um fracasso. Conferindo a mensurabilidade da variável aleatória pela definição.
+Ou seja, cara representa um sucesso, e coroa representa um fracasso. Conferindo a existencia da variável aleatória pela definição, segue que
 
 - $1\in\mathcal{B}(\mathbb{R}),\;X^{-1}(1) = \{\text{cara} \in \Omega\}\in \mathcal{A}$
 - $0\in\mathcal{B}(\mathbb{R}),\;X^{-1}(0) = \{\text{coroa} \in \Omega\}\in \mathcal{A}$
+
+Ainda, de outra forma, pelo critério de mensurabilidade, segue que
+$$
+\begin{array}{ll}
+    \{w\in\Omega\;|\;X(w)\leq x,\;x=0\}\in\mathcal{A} &= \{\text{coroa}\}\in\mathcal{A}\\
+    \{w\in\Omega\;|\;X(w)\leq x,\;x=1\}\in\mathcal{A} &= \{\text{coroa}, \text{cara}\}\in\mathcal{A}\\
+\end{array}
+$$
+
+### Lei de probabilidade dessa variável aleatória
+$$
+\mathbb{P}_X(B) = \mathbb{P}_X(\mathbb{X\in B}) = \mathbb{P}({X^{-1}(B)})=
+\left\{
+\begin{array}{ll}
+    p & \text{, caso }X=1\iff {X^{-1}(B)}=\{{\text{cara}}\}\\
+    q & \text{, caso }X=0\iff {X^{-1}(B)}=\{{\text{coroa}}\}\\
+\end{array}
+\right.
+,\;\forall B\in\mathcal{B}(\mathbb{R})
+$$
+
+
+
+
+

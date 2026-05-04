@@ -4,28 +4,27 @@ $$
 X: \Omega \rightarrow \mathbb{R}
 $$
 
-Com esta aplicação, um novo espaço de probabilidade é criado em $\mathbb{R}$. A $\sigma$-álgebra gerada pelo conjunto $\mathbb{R}$ é a $\mathcal{B}(\mathbb{R})$ E uma variável $X$ deve existir uma correspondência de todo evento/conjunto $B\in\mathcal{B}(\mathbb{R})$ no espaço de probabilidade de "domínio" da $X$, tal que $X^{-1}(B)\in\mathcal{A}$
+Com esta aplicação, um novo espaço de probabilidade é criado em $\mathbb{R}$. A $\sigma$-álgebra gerada pelo conjunto $\mathbb{R}$ é a $\mathcal{B}(\mathbb{R})$ e, em uma variável $X$, deve existir uma correspondência de todo conjunto ("evento") $B\in\mathcal{B}(\mathbb{R})$ no espaço de probabilidade de "domínio" da $X$, tal que $X^{-1}(B)\in\mathcal{A}$
 $$
 \forall B \in \mathcal{B}(\mathbb{R}),\;X^{-1}(B)=\{w\in\Omega\;|\;X(w)\in B\}\in\mathcal{A}
 $$
 
-Isto é, a princício isso teria de ser avaliado para todos os conjuntos $B$ possíveis para garantir que $X$ é uma variável aleatória. Mas basta avaliar 
+Isto é, a princício isso teria de ser avaliado para todos os conjuntos $B$ possíveis para garantir que $X$ é uma variável aleatória. Mas basta avaliar a existência pelo critério de mensurabilidade, dado por
 $$
 \{w\in \Omega\;|\;X(w)\leq x\}\in \mathcal{A}\;\forall\;x\in\mathbb{R}
 $$
+
+Por fim, no novo espaço de probabilidade, há uma nova função de probabilidade $\mathbb{P}_{X}$ que depende de $\mathbb{P}$, pois pela definição de $\mathbb{P}_{X}$ tem-se que
+$$
+\mathbb{P}_{X}(B) = \mathbb{P}_{X}(X\in B) = \mathbb{P}({X^{-1}(B)})
+$$
+
+Porém, $\mathbb{P}_{X}$ captura toda a informação probabilistica de $X$, então, no caso de $\mathbb{P}_X$ conhecida, não é necessário delinear o espaço de probabilidade de domínio $(\Omega, \mathcal{A}, \mathbb{P})$. Ainda, pode se estabelecer a relação $\mathbb{P}_X=$
 
 $$
 (\Omega, \mathcal{A}, \mathbb{P})\stackrel{X}{\longrightarrow}(\mathbb{R}, \mathcal{B}(\mathbb{R}), \mathbb{P}_{X})
 $$
 
-
-
-
-
-
-
-As relações entre as variáveis aleatórias são:
-    *
 
 ## Variáveis Aleatórias Discretas
 ## Variáveis Aleatórias Contínuas
