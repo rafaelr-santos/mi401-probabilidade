@@ -19,7 +19,17 @@ $$
 \mathbb{P}_{X}(B) = \mathbb{P}_{X}(X\in B) = \mathbb{P}({X^{-1}(B)})
 $$
 
-Porém, $\mathbb{P}_{X}$ captura toda a informação probabilistica de $X$, então, no caso de $\mathbb{P}_X$ conhecida, não é necessário delinear o espaço de probabilidade de domínio $(\Omega, \mathcal{A}, \mathbb{P})$. Ainda, pode se estabelecer a relação $\mathbb{P}_X=$
+Porém, $\mathbb{P}_{X}$ captura toda a informação probabilistica de $X$, então, no caso de $\mathbb{P}_X$ conhecida, não é necessário delinear o espaço de probabilidade de domínio $(\Omega, \mathcal{A}, \mathbb{P})$. Também, pode-se estabelecer a relação $\mathbb{P}_X=f_X(X)$ em que $f_X$ é a função de distribuição de $X$. Ainda, $P_X$, é completamente determinada por sua função de distribuição acumulada, dada por
+$$
+F_{X}=\mathbb{P}_{X}([-\infty, x])=\mathbb{P}(X\leq x),\;x\in\mathbb{R}
+$$
+
+
+
+
+
+
+Assim, a relação entre os espaços de probabilidade é dada por
 
 $$
 (\Omega, \mathcal{A}, \mathbb{P})\stackrel{X}{\longrightarrow}(\mathbb{R}, \mathcal{B}(\mathbb{R}), \mathbb{P}_{X})
