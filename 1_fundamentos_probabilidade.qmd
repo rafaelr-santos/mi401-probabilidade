@@ -4,10 +4,10 @@
  * $A\subseteq B$: A está contido em B e A é menor que B;
 
 ## Operação de Conjuntos
- * $A\cup B$: União de A e B, ou seja, o conjunto formado por todos os elementos que pertencem a A ou a B ou a ambos
+ * $A\cup B$: União de A e B, ou seja, o conjunto formado por todos os elementos que pertencem a A ou a B ou a ambos;
  * $A\cap B$: Interseção de A e B, ou seja, o conjunto formado por todos os elementos que pertencem a A e a B;
  * $A^c$: Complemento de A, ou seja, o conjunto formado por todos os elementos que não pertencem a A;
- * $A\setminus B$: Diferença entre A e B, ou seja, o conjunto formado por todos os elementos que pertencem a A mas não pertencem a B;
+ * $A\setminus B$: Diferença entre A e B, ou seja, o conjunto formado por todos os elementos que pertencem a A mas não pertencem a B.
 
 
 ## Domínio, Contradomínio, Imagem e Pré-imagem

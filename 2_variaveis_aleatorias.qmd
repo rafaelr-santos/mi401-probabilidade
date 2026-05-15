@@ -25,10 +25,6 @@ F_{X}=\mathbb{P}_{X}([-\infty, x])=\mathbb{P}(X\leq x),\;x\in\mathbb{R}
 $$
 
 
-
-
-
-
 Assim, a relação entre os espaços de probabilidade é dada por
 
 $$
@@ -36,5 +32,111 @@ $$
 $$
 
 
+## Transformação de Variáveis Aleatórias
+Considerando uma variável aleatória $X$ uma transformação/função $g:\mathbb{R}\rightarrow\mathbb{R}$ cria um novo espaço de probabilidade. Esse novo espaço de probabilidade é gerado de uma forma muito semelhante à aplicação $X:\Omega\rightarrow\mathbb{R}$. No caso
+$$
+(\Omega, \mathcal{A}, \mathbb{P})
+\stackrel{X}{\longrightarrow}
+(\mathbb{R}, \mathcal{B}(\mathbb{R}), \mathbb{P}_{X})
+\stackrel{Y=g(X)}{\longrightarrow}
+(\mathbb{R}, \mathcal{B}(\mathbb{R}), \mathbb{P}_{Y})
+$$
+
+Mas note que o caminho fica mais curto, já que as propriedades de $\mathbb{R}, \mathcal{B}(\mathbb{R})$, podem, de alguma forma serem "reaproveitadas". A condição sobre $g$ para que tudo funcione é que g seja "Borel-mensurável" de modo grosseiro, $g^{-1}(Y)\in\mathcal{B}(\mathbb{R})$ é o análogo a $X$ ser mensurável. Na prática, o que importa é que se $g$ é razoavelmente bem comportada, então as coisas funcionam e $Y=g(X)$ é uma variável aleatória. A uso de uma transformação se torna interessante ao passo que uma nova lei de probabilidade $\mathbb{P}_{Y}$ é estabelecida. No caso, a lei de $Y=g(X)$ é dada por
+$$
+\mathbb{P}_{Y}(B_{Y})=\mathbb{P}_{X}(Y\in B_{X})=\mathbb{P}_{X}(g^{-1}(B_{Y}))
+$$
+
+Que é, essencialmente, usar a informação da lei de X para especificar a lei de $Y$.
+
+## Independência
+Seja $n\geq 2$. As variáveis aleatórias $X_1, \dots, X_n$ são independentes se para todos $A_1,\dots,A_n\in\mathcal{B}(\mathbb{R})$ tem-se 
+$$
+\mathbb{P}(X_1 \in A_1,\;\dots,\;X_n \in A_n) = \mathbb{P}(X_1 \in A_1)\dots\mathbb{P}(X_n \in A_n)
+$$
+
+Consequentemente
+$$
+F_{X_1,\dots,X_n}(x_1,\dots,x_n)=
+F_{X_1}(x_1)\dots F_{X_n}(x_n)
+$$
+
+Dados esses resultados, uma outra propriedade muito importante é: Se $X_1,\dots,X_n$ são independentes, $h_1,\dots,h_n:\mathbb{R}\rightarrow\mathbb{R}$ são mensuráveis, então $h_1(X_1),\dots,h_n(X_n)$ também são independentes.
+
+
 ## Variáveis Aleatórias Discretas
+A variável aleatória $X$ é discreta se sua imagem $\mathcal{Im}(X)=\{X(w)\;|\;w\in\Omega\}$ é um sub-conjunto contável de $\mathbb{R}$.
+
+### Função Probabilidade de Massa
+$$
+p_X(x) = \mathbb{P}(X=x),\sum_{x\in\mathcal{Im(X)}}p_{X}(x)=1
+$$
+
+### Função de Distribuição Acumulada
+$$
+F_{x}(x) = \sum_{y\in\mathcal{Im(X)},\;y\leq x}p_{X}(x)
+$$
+
+### Transformação de um Variável Aleatória Discreta
+$$
+p_{y} =
+\mathbb{P}(g(X) = y) = 
+\mathbb{P}(X = g^{-1}(\{y\})) =
+\sum^{}_{x\in g^{-1}(\{y\})}p_{x}(x)
+$$
+
+### Distribuição Condicional
+$$
+p(x,y)_{X|Y}=\mathbb{P}(X=x|Y=y) = \frac{\mathbb{P}(X=x\cap Y=y)}{\mathbb{P}(Y=y)}
+$$
+
+### Função de Densidade Condicional
+$$
+f(x,y)_{X|Y}=\frac{f_{X,Y}(x,y)}{f_{Y}(y)}
+$$
+
+### Soma de Variáveis
+Seja $S=X+Y$, e X e Y variáveis discretas.
+$$
+p_S(s) = \sum_{x\in\mathcal{Im}(X)} p_X(x) p_Y(s-x)
+$$
+
 ## Variáveis Aleatórias Contínuas
+### Função Probabilidade de Densidade
+$$
+\mathbb{P}(X\in B) = \int_{B}f_{X}(x)dx,\;\int^{\infty}_{-\infty}f_{X}(x)dx=1
+$$
+
+### Função de Distribuição Acumulada
+$$
+F_{x}(x) = \int^{x}_{-\infty}f_{X}(x)dx
+$$
+
+### Transformação de um Variável Aleatória Contínua
+$$
+F_{Y}(y) = \mathbb{P}(g(X)\leq y) = \int^{g^{-1}(y)}_{\infty}f(x)dx
+$$
+
+Quando g é differenciável e estritamente monótona, é possível deduzir uma fórmula explícita para a densidade de Y, dada por
+
+$$
+f_{y}(y) = 
+\left\{
+\begin{array}{l}
+    f_{X}(g^{-1}(y))\times|g´(g^{-1}(y))|^{-1}, \;g´(x)\neq0,\;y\in \{x:f_{X}\neq0\}\\
+    0, \text{ caso contrário}
+\end{array}
+\right.
+$$
+
+### Distribuição Condicional
+$$
+f(x,y)_{X|Y}=\frac{f_{X,Y}(x,y)}{f_{Y}(y)}
+$$
+
+### Soma de Variáveis
+$$
+f_S(s) = \int_{-\infty}^{\infty} f_X(x) f_Y(s-x) dx
+$$
+
+
